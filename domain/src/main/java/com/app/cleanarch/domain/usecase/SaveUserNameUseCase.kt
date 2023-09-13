@@ -6,10 +6,10 @@ import com.app.cleanarch.domain.repository.UserRepository
 class SaveUserNameUseCase(private val userRepository: UserRepository) {
 
 
-    fun execute(param: SaveUserNameParam): Boolean{
+    fun execute(param: SaveUserNameParam): Boolean {
         val oldUserName = userRepository.getName()
 
-         if (oldUserName.firstName == param.name){
+         if (oldUserName.firstName == param.name) {
              return true
          }
 
